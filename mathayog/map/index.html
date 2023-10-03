@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../assets/css/app.css" />
+        <link rel="stylesheet" href="../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../assets/css/placement-page.css" />
+
+        <link
+            rel="icon"
+            href="../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+
+        <style>
+            /* CSS to style your slide-up div */
+            .slide-up {
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-end;
+
+                position: fixed;
+                bottom: 0; /* Initially at the bottom of the screen */
+                left: 0;
+
+                height: 8rem;
+                width: 100%;
+                background-color: #ffffff;
+                transform: translateY(
+                    100%
+                ); /* Initially hidden below the screen */
+                transition: transform 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+
+                box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                z-index: 999; /* Adjust the z-index as needed */
+            }
+
+            .card-selected {
+                border: 0.5rem solid #859cff;
+                box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.07);
+            }
+
+            .grayscale {
+                filter: grayscale(100%);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="selection-container">
+                    <div class="pet-selection-container">
+                        <div class="pet-title-section">
+                            <img
+                                src="../assets/images/svgs/selection_pet_icon.svg"
+                                alt="selectionUserIcon"
+                                class="selection-user-icon"
+                            />
+                            <div class="pet-bubble">
+                                <h3 class="avatar-bubble-title">
+                                    Choose a plane.
+                                </h3>
+                            </div>
+                            <div class="pet-bubble-tail"></div>
+                        </div>
+                        <div class="map-content-section">
+                            <div
+                                class="map-card"
+                                id="map-card1"
+                                onclick="showSlideUp(1)"
+                            >
+                                <div class="pet-img-frame">
+                                    <img
+                                        src="../assets/images/svgs/map1.svg"
+                                        alt="avatar1"
+                                        class="pet-img"
+                                    />
+                                </div>
+                                <div class="map-text-content">
+                                    <h4>Whole Numbers</h4>
+                                </div>
+                            </div>
+
+                            <div
+                                class="map-card"
+                                id="map-card2"
+                                onclick="showSlideUp(2)"
+                            >
+                                <div class="pet-img-frame">
+                                    <img
+                                        src="../assets/images/svgs/map2.svg"
+                                        alt="avatar2"
+                                        class="pet-img"
+                                    />
+                                </div>
+                                <div class="map-text-content">
+                                    <h4>
+                                        Word Problems
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pop-up slide-up" id="slide-up">
+                    <button
+                        class="btn"
+                        style="width: 22rem; height: 5rem; margin-right: 8rem"
+                        onclick="navigateToNextPage()"
+                    >
+                        Next
+                    </button>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        function showSlideUp(selectedCard) {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it up
+
+            // Remove both classes from all pet cards
+            document.querySelectorAll(".map-card").forEach((card) => {
+                card.classList.remove("grayscale");
+                card.classList.remove("card-selected");
+            });
+
+            // Add the 'grayscale' class to unselected pet cards
+            document.querySelectorAll(".map-card").forEach((card) => {
+                if (card.id !== `map-card${selectedCard}`) {
+                    card.classList.add("grayscale");
+                }
+            });
+
+            // Add the 'card-selected' class to the selected map-card
+            const selectedPetCard = document.getElementById(
+                `map-card${selectedCard}`
+            );
+            selectedPetCard.classList.add("card-selected");
+        }
+
+        function hideSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(100%)"; // Slide it down to hide
+
+            // Remove the 'grayscale' class from all map-card elements
+            document.querySelectorAll(".map-card").forEach((card) => {
+                card.classList.remove("grayscale");
+                card.classList.remove("card-selected");
+            });
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href =
+                "../placement/";
+        }
+        // Add an event listener to the document to handle clicks
+        document.addEventListener("click", function (event) {
+            // Check if the clicked element is not a pet card or the pop-up
+            if (
+                event.target.id == "slide-up" &&
+                event.target.id !== "next-button"
+            ) {
+                hideSlideUp(); // Hide the pop-up
+            }
+        });
+    </script>
+</html>

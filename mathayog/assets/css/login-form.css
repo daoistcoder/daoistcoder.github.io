@@ -1,0 +1,84 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 80%;
+  max-height: 85%;
+  min-height: fit-content;
+
+  background-color: white;
+  border-radius: 25px;
+  padding: 2rem;
+  gap: 1rem;
+
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+
+  margin-top: 2vh;
+
+  animation-name: fadeIn; /* Reference the animation keyframes */
+  animation-duration: 0.75s; /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  opacity: 0; /* Start with 0 opacity (invisible) */
+}
+
+.login-mid-content {
+  height: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 0.5rem;
+}
+
+.login-mid-content p {
+  font-family: 'Omnes-Regular', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #0B2D72;
+}
+
+.login-mid-content input {
+  padding: 0.1rem 0;
+  width: 1.25rem;
+
+  margin-top: 3%;
+}
+
+.login-remember-section {
+  display: flex;
+  flex-direction: row;
+
+  gap: 0.5em;
+}
+
+.form-bottom-content {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1.5vh;
+}
+
+.form-bottom-text {
+  color: #4B4B4B;
+  font-family: 'Omnes-Regular', sans-serif;
+  font-size: 1.4rem;
+}
+
+.form-bottom-link {
+  font-family: 'Omnes-Regular', sans-serif;
+  font-size: 1.4rem;
+  color: #88D758;
+  text-decoration: none;
+}

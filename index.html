@@ -3,190 +3,39 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>jeromeballena.dev</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="mathayog/assets/css/registration-page.css" />
+        <link rel="stylesheet" href="mathayog/assets/css/login-form.css" />
 
-        <!-- Assets -->
         <link
             rel="icon"
-            href="./assets/icons/favicon.ico"
+            href="assets/images/icons/mathayog_logo.ico"
             type="image/x-icon"
         />
-
-        <!-- Scripts -->
-        <script src="js/animation.js" defer></script>
-        <script src="js/color-mode.js" defer></script>
-        <script src="js/project-slideshow.js" defer></script>
-
-        <!--  Styles -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/color-mode.css" />
-        <link rel="stylesheet" href="css/animation.css" />
+        <title>Mathayog</title>
     </head>
+
     <body>
-        <div id="hero">
-            <h5>Hello I'm</h5>
-            <h1>Jerome Ballena</h1>
-            <p>Fullstack Developer</p>
-
-            <!-- Block, Element, Modifer (BEM) naming Convention -->
-            <div id="hero__animation">
-                <div id="hero__animation__img"></div>
-            </div>
-        </div>
-
-        <nav id="grid">
-            <div id="grid__tl">
-                <div id="grid__tl__btn">About</div>
-                <div id="grid__tl__content">
-                    <div class="cards">
-                        <div class="cards__content">
-                            <article>
-                                <img
-                                    class="icon"
-                                    src="./assets/icons/experience.png"
-                                    alt="experience icon"
-                                />
-                                <h2>Experience</h2>
-                                <p>
-                                  6 Months +  
-                                  <br>Developer 
-                                </p>
-                            </article>
-                            <p class="cards_content__text">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                            </p>
-                        </div>
-
-                        <div class="cards__content">
-                          <article>
-                              <img
-                                  class="icon"
-                                  src="./assets/icons/education.png"
-                                  alt="education icon"
-                              />
-                              <h2>Education</h2>
-                              <p>
-                               BS Information Technology
-                              </p>
-                          </article>
-                          <p class="cards_content__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                          </p>
-                      </div>
-                    </div>
+        <div class="register-container">
+            <div class="register-page-title-description">
+                <div class="register-page-icon-title" style="display: flex">
+                    <img
+                        class="register-page-icon"
+                        src="mathayog/assets/images/svgs/mathayog_logo.svg"
+                        alt=""
+                    />
+                    <h3 class="register-page-title">Mathayog</h3>
+                </div>
+                <div class="register-page-description">
+                    <p class="page-description" id="page-description"></p>
                 </div>
             </div>
 
-            <div id="grid__tr">
-                <div id="grid__tr__btn">Experience</div>
-                <div id="grid__tr__content">
-                    <div class="cards">
-                        <div class="cards__content">
-                            <article>
-                                <img
-                                    class="icon"
-                                    src="./assets/icons/experience.png"
-                                    alt="experience icon"
-                                />
-                                <h2>Experience</h2>
-                                <p>
-                                  6 Months +  
-                                  <br>Developer 
-                                </p>
-                            </article>
-                            <p class="cards_content__text">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                            </p>
-                        </div>
-
-                        <div class="cards__content">
-                          <article>
-                              <img
-                                  class="icon"
-                                  src="./assets/icons/education.png"
-                                  alt="education icon"
-                              />
-                              <h2>Education</h2>
-                              <p>
-                               BS Information Technology
-                              </p>
-                          </article>
-                          <p class="cards_content__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi optio accusantium delectus cupiditate.
-                          </p>
-                      </div>
-                    </div>
-                </div>
+            <div class="form-container" id="form-container">
+                <!-- component javaScript code -->
+                <script src="mathayog/assets/scripts/helper/formContainerHandler.js"></script>
+                <!-- component javaScript code -->
             </div>
-
-            <div id="grid__bl">
-                <div id="grid__bl__btn">Projects</div>
-                <div id="grid__bl__content">
-                    <div class="cards">
-                        <div class="cards__content">
-                            <article>
-                                <img
-                                    class="icon"
-                                    src="./assets/icons/experience.png"
-                                    alt="experience icon"
-                                />
-                                <h2>Experience</h2>
-                                <p>
-                                  6 Months +  
-                                  <br>Developer 
-                                  <br>Experience
-                                </p>
-                            </article>
-                            <p class="cards_content__text">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                            </p>
-                        </div>
-
-                        <div class="cards__content">
-                          <article>
-                              <img
-                                  class="icon"
-                                  src="./assets/icons/education.png"
-                                  alt="education icon"
-                              />
-                              <h2>Education</h2>
-                              <p>
-                               BS Information Technology
-                              </p>
-                          </article>
-                          <p class="cards_content__text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                          </p>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="grid__br">
-                <div id="grid__br__btn">Contact</div>
-                <div id="grid__br__content">
-                    <h5 class="contact-text">Get In Touch</h5>
-                    <h2 class="contact-text">Contact Me</h2>
-                    <div>
-                      <button
-                        class="btn btn-contact"
-                        onclick="window.location.href='mailto:jeromeballena.dev@gmail.com'"
-                      >
-                        Email
-                      </button>
-                      <button
-                        class="btn btn-contact"
-                        onclick="window.location.href='https://www.linkedin.com/in/jerome-ballena-b8807a170/'"
-                      >
-                        LinkedIn
-                      </button>
-                    </div>
-                </div>    
-            </div>
-        </nav>
-
-        <div id="color-mode">
-            <div id="toggle-button" class="icon"></div>
         </div>
     </body>
 </html>

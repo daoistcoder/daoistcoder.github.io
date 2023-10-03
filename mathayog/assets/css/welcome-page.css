@@ -1,0 +1,265 @@
+.welcome-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  width: 100vw;
+  height: 90vh;
+
+  background-image: url('../images/backgrounds/placement_content.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+
+  z-index: 0;
+  /* Lower z-index for the welcomeContainer */
+}
+
+.welcome-container::before {
+  content: "";
+  position: absolute; /* Change to absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(105, 215, 246, 0.8); /* Background color with opacity */
+  z-index: 1;
+
+  animation-name: fadeIn; /* Reference the animation keyframes */
+  animation-duration: 0.5s; /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  opacity: 0; /* Start with 0 opacity (invisible) */
+}
+ 
+
+.dialog-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  width: 70%;
+  height: 70%;
+
+  padding: 2rem;
+  position: relative;
+  z-index: 3;
+
+  animation-name: fadeIn; /* Reference the animation keyframes */
+  animation-duration: 1.75s; /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  opacity: 0; /* Start with 0 opacity (invisible) */
+}
+
+#dialog-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+
+  width: 60%;  
+  max-height: 70%;
+  min-height: fit-content;
+
+  background-color: #ffffff;
+
+  border-radius: 20px;
+  box-shadow: 1rem 1rem 0px rgba(0, 0, 0, 0.2);
+
+  padding: 2.5rem;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  
+  position: relative;
+  z-index: 4;
+
+  overflow: visible;
+}
+
+#dialog-bubble::after {
+  content: ""; /* Required for pseudo-elements with no content */
+  
+  width: 15%;
+  height: 0.5vh;
+
+  border-top: 45px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 45px solid #FFFFFF;
+
+  top: 30%; /* Position it vertically in the middle */
+  left: 38.5vw; /* Adjust this value to control the position of the tail */
+
+  position: absolute;
+}
+
+.bubble-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 75%;
+}
+
+.bubble-bottom-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  padding-top: 2.25rem;
+}
+
+
+.bubble-text-content p {
+  color: #4B4B4B;
+  font-family: 'Omnes-SemiBold', sans-serif;
+  font-size: 2.65rem;
+
+  word-spacing: 0.25rem;
+  line-height: 3.6rem;
+}
+
+
+.bubble-text-content input {
+  align-items: center;
+  width: 95%;
+  height: 5rem;
+  color: #4B4B4B;
+  font-family: 'Omnes-SemiBold', sans-serif;
+  font-size: 2.5rem;
+
+  word-spacing: 0.25rem;
+  line-height: 3rem;
+
+  border: 3px solid #E5E5E5;
+  border-radius: 10px;
+
+  background-color: #F9F9F9;
+  
+  margin: 2vh 1vw;
+  padding: 1.5rem;
+}
+
+
+.bubble-text-content input:focus {
+  outline-color: #859CFF; /* Change this to your desired border color */
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  width: 33%;
+
+  position: relative;
+  z-index: 5;
+
+  animation-name: fadeIn; /* Reference the animation keyframes */
+  animation-duration: 0.75s; /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  opacity: 0; /* Start with 0 opacity (invisible) */
+}
+
+.avatar-section img {
+  min-width: 19vw;
+  height: auto;
+
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.muning-section {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  width: 33%;
+
+  position: relative;
+  z-index: 5;
+
+  animation-name: fadeIn; /* Reference the animation keyframes */
+  animation-duration: 0.75s; /* Duration of the animation */
+  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  opacity: 0; /* Start with 0 opacity (invisible) */
+  
+}
+
+.muning-section img {
+  min-width: 20vw;
+  height: auto;
+
+  position: relative;
+  left: -15%;
+
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  position: relative;
+  width: 65rem;
+  height: 30rem;
+
+  background-image: url('../images/svgs/message_bubble.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  color: #4B4B4B;
+  /* Higher z-index for the messageContainer to place it in front */
+}
+
+.messageContainer h3 {
+  font-family: 'Omnes-Bold', sans-serif;
+  font-size: 2.55rem;
+  line-height: 4rem;
+}
+
+.messageContainer p {
+  font-family: 'Omnes-Regular', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.titleSection {
+  width: 70%;
+  margin: 2rem 0 2rem 3rem;
+}
+
+.contentSection {
+  width: 70%;
+  margin-left:3rem;
+}
+
+.btnTest {
+  margin-top: 2rem;
+  padding: 0.25rem;
+  width: 20rem;
+  height: 5rem;
+  
+  font-family: 'Omnes-Bold', sans-serif;
+  font-size: 1.75rem;
+  color: white;
+
+  background-image: url('../images/svgs/btn1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  
+  cursor: pointer; /* Correct the cursor property value */
+
+   /* Set the border to transparent */
+   border: 1px solid transparent;
+}

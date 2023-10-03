@@ -1,0 +1,49 @@
+<!-- Start of welcome-content.html -->
+<div class="welcome-container">
+    <div class="dialog-section">
+        <div id="dialog-bubble">
+            <div class="bubble-text-content" id="bubble-content"></div>
+            <button class="btn" id="next-button">Next</button>
+        </div>
+    </div>
+    <div class="avatar-section">
+        <img src="../assets/images/svgs/datu.svg" alt="datu-svg" />
+    </div>
+</div>
+<!-- End of welcome-content.html -->
+
+<!-- <script>
+        // Function to load and replace content based on the route
+        function loadContent(route) {
+            const container = document.getElementById("root");
+
+            // Define the path to the HTML file corresponding to the route
+            const filePath = `./assets/components/${route}-content.html`;
+
+            // Fetch the content from the HTML file
+            fetch(filePath)
+                .then((response) => response.text())
+                .then((html) => {
+                    // Insert the fetched HTML content into the container
+                    container.innerHTML = html;
+                })
+                .catch((error) => {
+                    console.error("Error loading content:", error);
+                });
+        }
+
+        // Function to handle route changes
+        function handleRouteChange() {
+            const hash = window.location.hash.substr(2); // Remove the '#' and '/'
+            const route = hash || "welcome"; // Default to "login" if no hash
+
+            // Load content based on the route
+            loadContent(route);
+        }
+
+        // Add an event listener to handle route changes
+        window.addEventListener("hashchange", handleRouteChange);
+
+        // Initial route handling
+        handleRouteChange();
+    </script> -->

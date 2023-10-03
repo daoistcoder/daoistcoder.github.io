@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Omnes-Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Omnes-Bold';
+    /* You can specify any name you want */
+    src: url('../fonts/Omnes-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Omnes-Regular';
+    /* You can specify any name you want */
+    src: url('../fonts/Omnes-Regular.woff') format('woff');
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with 0 opacity */
+    }
+    to {
+      opacity: 1; /* End with full opacity (visible) */
+    }
+  }
+
+.register-container {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../images/backgrounds/register_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.register-page-title-description {
+    margin-bottom: 4vh;
+    width: 55vw;
+    height: 80vh;
+}
+
+.register-page-icon-title,
+.register-page-description {
+    height: 10rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.register-page-title {
+    color: white;
+    font-size: 3.75rem;
+    transform: translateY(-15px);
+    letter-spacing: 3px;
+    margin-left: 1.5rem;
+    margin-right: 2rem;
+}
+
+.page-description {
+    color: white;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+
+    line-height: 3rem;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45vw;
+    height: 90vh;
+
+    padding-top: 2rem;
+    padding-right: 3rem;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 80%;
+    max-height: 90%;
+    min-height: fit-content;
+
+    background-color: white;
+    border-radius: 25px;
+    padding: 1.25rem 2rem;
+    gap: 1rem;
+
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+
+    margin-top: 2vh;
+
+    animation-name: fadeIn; /* Reference the animation keyframes */
+    animation-duration: 0.75s; /* Duration of the animation */
+    animation-timing-function: ease-in-out; /* Timing function for smooth animation */
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    opacity: 0; /* Start with 0 opacity (invisible) */
+}
+
+.registration-form-title {
+    color: #4B4B4B;
+    text-align: center;
+
+    font-size: 1.75rem;
+
+    width: 93%;
+
+    word-spacing: 0.25rem;
+    line-height: 150%;
+}
+
+.dashed-line {
+    border-top: 4px dashed #E5E5E5;
+    width: 90%;
+}
+
+.page-form {
+    width: 28vw;
+    height: auto;
+}
+
+
+.registration-form-name {
+    display: flex;
+}
+
+.registration-form-firstname {
+    margin-right: 5%;
+}
+
+.firstname {
+    width: 90%;
+}
+
+.lastname {
+    width: 90%;
+}
+
+.registration-label {
+    font-family: 'Omnes-Regular', sans-serif;
+    color: #4B4B4B;
+    font-size: 1.25rem;
+}
+
+.registration-input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+    font-family: 'Omnes-Regular',sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 1.75rem;
+
+    font-size: 20px;
+    background-color: #F9F9F9;
+
+}
+
+/* Style for the input when it's in focus (active) */
+.registration-input:focus {
+    outline-color: #859CFF; /* Change this to your desired border color */
+}
+
+.registration-btn {
+    font-family: 'Omnes-Bold', sans-serif;
+    font-size: 1.45rem;
+    color: white;
+    height: 4.35rem;
+    width: 100%;
+    border-color: transparent;
+    background-color: #859CFF;
+    border-radius: 20px;
+    box-shadow: 0px 10px 0px #7187E4;
+    margin-top: 1.75vh;
+
+    transition: background-color 0.4s;
+}
+
+
+.registration-btn:hover {
+    background-color: #9CAFFF;
+    cursor: pointer;
+}
+

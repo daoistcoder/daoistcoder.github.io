@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.logoSection, .userSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.logoSection {
+  margin-left: 5rem;
+  color: #0038A8;
+  font-size: 2rem;
+  font-family: 'Omnes-Bold', sans-serif;
+}
+
+.userSection {
+  margin-right: 6rem;
+  color: #4B4B4B;
+  font-size: 1.25rem;
+  font-family: 'Omnes-Bold', sans-serif;
+}
+
+#logoIcon {
+ margin-top: 1rem;
+ width: 5rem;
+}
+
+#userIcon {
+  width: 3.5rem;
+}
+

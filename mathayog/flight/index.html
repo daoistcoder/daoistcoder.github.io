@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../assets/css/app.css" />
+        <link rel="stylesheet" href="../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../assets/css/placement-page.css" />
+        <link rel="stylesheet" href="../assets/css/flight-page.css" />
+
+        <link
+            rel="icon"
+            href="../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+
+        <style>
+            /* CSS to style your slide-up div */
+            .slide-up {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                position: fixed;
+                bottom: 0; /* Initially at the bottom of the screen */
+                left: 0;
+
+                height: 13.25rem;
+                width: 100%;
+                background-color: #ffd15b;
+                transform: translateY(
+                    120%
+                ); /* Initially hidden below the screen */
+                transition: transform 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+
+                box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                z-index: 999; /* Adjust the z-index as needed */
+
+                overflow: visible;
+            }
+
+            .card-selected {
+                border: 0.5rem solid #859cff;
+                box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.07);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="flight-container"></div>
+
+                <div class="slide-up" id="slide-up">
+                    <div class="flight-muning-section">
+                        <img
+                            src="../assets/images/svgs/muning.svg"
+                            alt="muning-svg"
+                        />
+                        <div id="muning-dialog-bubble">
+                            <div
+                                class="muning-bubble-text-content"
+                                id="bubble-content"
+                            >
+                                <p>
+                                    Alright, let’s start. I’ll be asking you 10
+                                    math questions. Take all the time you need
+                                    to answer them.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        id="next-button"
+                        class="btn"
+                        style="
+                            width: 20rem;
+                            height: 5rem;
+                            margin-right: 8rem;
+                            margin-bottom: 0.25rem;
+                        "
+                        onclick="navigateToNextPage()"
+                    >
+                        Continue
+                    </button>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        // Function for  the slide-up
+        function showSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
+        }
+        // Function to show the slide-up after a delay
+        function showSlideUpDelayed() {
+            setTimeout(function () {
+                showSlideUp();
+            }, 2400); // 5000 milliseconds (5 seconds) delay
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href =
+                "https://mathayog.github.io/placement_question/p_question_1.html";
+        }
+
+        // Call the function when the page loads
+        window.addEventListener("load", showSlideUpDelayed);
+    </script>
+</html>

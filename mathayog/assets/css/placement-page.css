@@ -1,0 +1,75 @@
+.placementContainer {
+  width: 100vw;
+  height: 90vh;
+  background-image: url('../images/backgrounds/placement_content.PNG'); /* Replace 'path-to-your-image.jpg' with the actual image file path */
+  background-size: cover; /* Adjust to your preferred size option */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  /* Additional background properties can be added as needed */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  position: relative;
+  width: 65rem;
+  height: 30rem;
+
+  background-image: url('../images/svgs/message_bubble.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  color: #4B4B4B;
+  /* Higher z-index for the messageContainer to place it in front */
+}
+
+.messageContainer h3 {
+  font-family: 'Omnes-Bold', sans-serif;
+  font-size: 2.55rem;
+  line-height: 4rem;
+}
+
+.messageContainer p {
+  font-family: 'Omnes-Regular', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.titleSection {
+  width: 70%;
+  margin: 2rem 0 2rem 3rem;
+}
+
+.contentSection {
+  width: 70%;
+  margin-left:3rem;
+}
+
+.btnTest {
+  margin-top: 2rem;
+  padding: 0.25rem;
+  width: 20rem;
+  height: 5rem;
+  
+  font-family: 'Omnes-Bold', sans-serif;
+  font-size: 1.75rem;
+  color: white;
+
+  background-image: url('../images/svgs/btn1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  
+  cursor: pointer; /* Correct the cursor property value */
+
+   /* Set the border to transparent */
+   border: 1px solid transparent;
+}
