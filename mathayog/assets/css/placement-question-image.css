@@ -16,7 +16,7 @@
 }
 
 .gen-navbar {
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     background-color: #f9f9f9;
     display: flex;
@@ -74,7 +74,7 @@ li > a {
 }
 
 .placement-question-background {
-    height: 105vh;
+    height: 90vh;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ li > a {
 }
 
 .question-background {
-    height: 70vh;
+    height: 60vh;
     width: 90%;
     padding: 50px;
     background-color: #f9f9f9;
@@ -162,6 +162,7 @@ li > a {
     height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease;
+
 }
 
 .question-btn {
@@ -187,8 +188,12 @@ li > a {
 
 .feedback-section {
     width: 100vw;
-    height: 20vh;
+    height: max-content;
     margin-top: 9.58vh;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .correct-feedback {
@@ -196,12 +201,20 @@ li > a {
     width: 100vw;
     background-color: #FFD15B;
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
 }
 
 .incorrect-feedback {
     height: 20vh;
     width:  100vw;
     background-color: #E3E3E3;;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .correct-feedback, .incorrect-feedback {
@@ -213,7 +226,7 @@ li > a {
 
 @keyframes slideUp {
     0% {
-        transform: translateY(100%);
+        transform: translateY(90%);
     }
     100% {
         transform: translateY(0);
