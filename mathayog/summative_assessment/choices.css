@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Omnes-Bold'; /* You can specify any name you want */
-    src: url('../fonts/Omnes-Bold.otf') format('opentype');
+    src: url('../../mathayog/assets/fonts/Omnes Bold.woff') format('woff');
   }
   
   @font-face {
     font-family: 'Omnes-Regular'; /* You can specify any name you want */
-    src: url('../fonts/Omnes-Regular.woff') format('woff');
+    src: url('../assets/fonts/Omnes-Regular.woff') format('woff');
 }
 
 * {
