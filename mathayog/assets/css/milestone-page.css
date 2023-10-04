@@ -80,7 +80,16 @@
     text-align: center;
 }
 
-.milestone-text-section h2 {
+.milestone-text-section-awesome {
+    padding: 1rem;
+
+    max-height: 30%;
+    height: max-content;
+    text-align: center;
+}
+
+.milestone-text-section h2,
+.milestone-text-section-awesome h2 {
     font-size: 4.5rem;
     line-height: 110%;
 }
@@ -104,6 +113,26 @@
 }
 
 .milestone-claim-section p {
+    line-height: 130%;
+}
+
+.milestone-claim-section-awesome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: max-content;
+    height: 26%;
+    min-height: min-content;
+    width: 80%;
+
+    font-size: 1.75rem;
+    text-align: center;
+
+    gap: 0.25rem;
+}
+
+.milestone-claim-section-awesome p {
     line-height: 130%;
 }
 
