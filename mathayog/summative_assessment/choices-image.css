@@ -94,7 +94,8 @@ li>a {
 
 
 .question-wrapper {
-    height: 50vh;
+    max-height: 70vh;
+    height: fit-content;    
     width: 90%;
     background-color: #f9f9f9;
     border-radius: 25px;
@@ -102,6 +103,7 @@ li>a {
 }
 
 .question-background {
+    height: max-content;
     padding: 30px
 }
 
@@ -151,7 +153,7 @@ li>a {
 
 .ac-choice,
 .bd-choice {
-    width: 30%;
+    width: 32%;
 }
 
 .a-choice,
