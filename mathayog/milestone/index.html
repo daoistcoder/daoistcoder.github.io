@@ -22,9 +22,13 @@
 
         <style>
             /* Add fade-in animations for arrival-muning */
-            #milestone-content-container {
+            #milestone-content-container,
+            #npc1,
+            #npc2,
+            #treasure,
+            #milestone-claim-section {
                 opacity: 0;
-                transition: opacity 0.75s ease-in-out;
+                transition: opacity 0.5s ease-in-out;
             }
 
             /* Add fade-in animations for muning-dialog-bubble-arrival */
@@ -35,35 +39,6 @@
 
             .fade-in {
                 opacity: 1 !important;
-            }
-
-            /* CSS to style your slide-up div */
-            .slide-up {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
-                background-color: #ffd15b;
-                height: 13.5rem;
-                width: 100%;
-
-                padding: 1rem;
-                gap: 1rem;
-
-                z-index: 995;
-                position: fixed;
-                bottom: 0; /* Initially at the bottom of the screen */
-                left: 0;
-
-                transform: translateY(
-                    120%
-                ); /* Initially hidden below the screen */
-
-                transition: transform 0.5s ease-in-out;
-
-                overflow: visible;
             }
         </style>
     </head>
@@ -94,24 +69,38 @@
 
             <main class="main-container" id="root">
                 <div class="milestone-container">
-                    <div class="milestone-content-container" id="milestone-content-container">
+                    <div
+                        class="milestone-content-container"
+                        id="milestone-content-container"
+                    >
                         <div class="milestone-text-section">
-                            <h2>
-                                Bravo, Adventurer!
-                            </h2>
-                            <h3>
-                                Your Skills Shine Bright!!
-                            </h3>
+                            <h2>Bravo, Adventurer!</h2>
+                            <h3>Your Skills Shine Bright!!</h3>
                             <p></p>
                         </div>
-                        <div class="milestone-claim-section">
+                        <div
+                            class="milestone-claim-section"
+                            id="milestone-claim-section"
+                        >
                             <p>You earned 10 gold coins!</p>
-                            <button class="milestone-btn" >Claim</button>
+                            <button class="milestone-btn">Claim</button>
                         </div>
                         <div class="milestone-img-section">
-                            <img src="../assets/images/svgs/milestone_npc1.svg" alt="npc1" id="npc1">
-                            <img src="../assets/images/svgs/milestone_treasure.svg" alt="treasure" id="treasure">
-                            <img src="../assets/images/svgs/milestone_npc2.svg" alt="npc2" id="npc2">
+                            <img
+                                src="../assets/images/svgs/milestone_npc1.svg"
+                                alt="npc1"
+                                id="npc1"
+                            />
+                            <img
+                                src="../assets/images/svgs/milestone_treasure.svg"
+                                alt="treasure"
+                                id="treasure"
+                            />
+                            <img
+                                src="../assets/images/svgs/milestone_npc2.svg"
+                                alt="npc2"
+                                id="npc2"
+                            />
                         </div>
                         <!-- <div id="muning-dialog-bubble-arrival">
                             <div
@@ -130,37 +119,33 @@
                         /> -->
                     </div>
                 </div>
-
-                <div class="slide-up" id="slide-up">
-                    <button
-                        id="next-button"
-                        class="arrival-btn"
-                        style="
-                            width: 26rem;
-                            height: 5rem;
-                            margin-bottom: 0.25rem;
-                        "
-                        onclick="navigateToNextPage()"
-                    >
-                        Start adventure
-                    </button>
-                </div>
             </main>
         </div>
     </body>
     <script>
         // Function to fade in arrival-muning
         function fadeInMilestoneContainer() {
-            const milestoneSubContainer = document.getElementById("milestone-content-container");
+            const milestoneSubContainer = document.getElementById(
+                "milestone-content-container"
+            );
             milestoneSubContainer.classList.add("fade-in");
         }
 
         // Function to fade in muning-dialog-bubble-arrival
-        function fadeInMuningDialogBubble() {
-            const muningDialogBubble = document.getElementById(
-                "muning-dialog-bubble-arrival"
+        function fadeInClaimSection() {
+            const treasure = document.getElementById("treasure");
+            const claimSection = document.getElementById(
+                "milestone-claim-section"
             );
-            muningDialogBubble.classList.add("fade-in");
+            treasure.classList.add("fade-in");
+            claimSection.classList.add("fade-in");
+        }
+
+        function fadeInNpc() {
+            const imgNpc1 = document.getElementById("npc1");
+            const imgNpc2 = document.getElementById("npc2");
+            imgNpc1.classList.add("fade-in");
+            imgNpc2.classList.add("fade-in");
         }
 
         // Function for  the slide-up
@@ -169,26 +154,25 @@
             slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
         }
         // Function to show the slide-up after a delay
-        function showSlideUpDelayed() {
+        function showAnimation() {
             setTimeout(function () {
                 // Call fadeInMilestoneContainer after 1000ms (1 second)
                 fadeInMilestoneContainer();
 
-                // Call fadeInMuningDialogBubble after 1000ms (1 second)
-                setTimeout(fadeInMuningDialogBubble, 1000);
+                // Call fadeInClaimSection after 1000ms (1 second)
+                setTimeout(fadeInClaimSection, 500);
 
-                // // Call showSlideUp after 2000ms (2 seconds)
-                // setTimeout(showSlideUp, 2000);
+                // Call showSlideUp after 2000ms (2 seconds)
+                setTimeout(fadeInNpc, 1200);
             }, 1000); // 2400 milliseconds (2.4 seconds) delay
         }
 
         function navigateToNextPage() {
             // Replace the URL with the desired URL
-            window.location.href =
-                "../learning/";
+            window.location.href = "../learning/";
         }
 
         // Call the function when the page loads
-        window.addEventListener("load", showSlideUpDelayed);
+        window.addEventListener("load", showAnimation);
     </script>
 </html>
