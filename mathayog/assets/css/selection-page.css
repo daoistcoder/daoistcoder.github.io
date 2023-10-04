@@ -234,6 +234,10 @@
     top: 50px;
   }
 
+  .map-card {
+    gap: 1rem;
+    padding: 0.25rem;
+  }
   
 }
 
