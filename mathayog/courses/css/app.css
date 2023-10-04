@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Omnes-Bold;
+    src: url('./public/assets/fonts/Omnes-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Omnes-Regular;
+    src: url('../assets/fonts/Omnes-Regular.woff');
+    font-weight: bold;
+    font-style: normal;
+}

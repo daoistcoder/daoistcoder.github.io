@@ -26,7 +26,7 @@
 
     animation-name: fadeOut;
     /* Reference the animation keyframes */
-    animation-duration: 2.5s;
+    animation-duration: 4s;
     /* Duration of the animation */
     animation-timing-function: ease-in-out;
     /* Timing function for smooth animation */
@@ -119,14 +119,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    gap: 0.25vh;
-    padding: 1rem;
+    gap: 2vh;
+    padding: 1rem 1rem 0.5rem;
 
     width: 70%;
-    max-height: 55%;
-    height: 32vh;
+    max-height: 70%;
+    height: max-content;
     min-height: fit-content;
 
     background-color: #ffffff;
@@ -162,11 +162,12 @@
 .learning-muning-bubble-text-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: first baseline;
+    justify-content: flex-start;
     width: 90%;
     
-    height: 100%;
+    height: max-content;
+    min-height: fit-content;
 
     z-index: 5;
 }
@@ -202,8 +203,6 @@
     background-color: #859CFF;
     border-radius: 13px;
     border-bottom: 8px solid #7187E4;
-  
-    margin-top: 1vh;
   
     transition: background-color 0.4s;
   }

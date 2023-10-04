@@ -1,0 +1,34 @@
+let questions = [
+    {
+        "question" : "1. Illustrate 15 by answering the following questions. Choose the correct answer.",
+        "subquestion" : "A. How many tens are there in 15?",
+        "correct_answer" : "1 tens",
+        "options" : [
+            {
+                "choice" : "1 tens",
+                "feedback" : " Correct! Since the TENS digit of 15 is 1, we have 1 tens. We can also break down 15 into 10 + 5, which shows that 15 consists of 1 tens and 5 ones. "
+            },
+            {
+                "choice" : "5 tens",
+                "feedback" : "If we break down 15 into 10 + 5. How many tens are there in 10?"
+            }
+            ],
+        "hints" : "What digit shows the TENS digit in a number?"
+    },
+    {
+        "question" : "1. Illustrate 15 by answering the following questions. Choose the correct answer.",
+        "subquestion" : "B. Which illustration shows 1 tens?",
+        "correct_answer" : "image 1",
+        "options" : [
+            {
+                "choice" : "image 1",
+                "feedback" : "Correct! Since we illustrate tens using base-10 blocks, 1 tens is illustrated as 1 base-10 block. "
+            },
+            {
+                "choice" : "image 2",
+                "feedback" : "Tens can be represented with base-10 blocks. How can we represent 1 tens using base-10 blocks? "
+            }
+            ],
+        "hints" : "How do we illustrate tens?"
+    }
+];

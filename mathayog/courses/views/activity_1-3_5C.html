@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/activity_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Whole Numbers - Activity</title>
+</head>
+<body>
+    <nav class="gen-navbar">
+        <div class="name-logo-wrapper">
+            <img class="register-page-icon" src="../images/Mathayog Logo - Dark.svg" alt="">
+            <h2 class="nav-title">Mathayog</h2>
+        </div>
+        <ul class="nav-ul">
+            <!-- <li><a href="">HOME</a></li>
+            <li><a href="">SIGN UP</a></li>
+            <li><a href="">LOGIN</a></li> -->
+            <div class="dropdown">
+
+                <button class="btn btn-primary-a dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span style="font-family: 'Omnes-Bold'; margin-right: 10px;">Juan Dela Cruz </span>
+                    <img class="user-avatar" src="../images/user-avatar.svg" alt="" height="40px">
+
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+    <!-- =====================End Navigation ============================================ -->
+    <!-- =============================== Main Container ================================= -->
+    <div class="activity-container">
+        <!-- ---------------------------- Activity COntent ------------------------------>
+        <div class="activity-content">
+            <div class="content-header">
+                <div class = "content-title">
+                    <span class="question-number">Whole Numbers > <span class ="activity-title"> Activity 01: Illustrate the given numbers using the correct blocks.</span>
+                    </span>
+                </div>
+
+                <div class="dropdown-langauge" style=" border: 1px solid #ffffff; border-radius: 50px;">
+
+                    <button id="dropdownMenu" class="btn btn-primary-a dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="English">
+                        <img class="language-icon" src="../images/globe-icon.svg" alt="" height="20px">
+                        <span style="color: #ffffff; margin-left: 7px">English</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" active>English</a></li>
+                      <li><a class="dropdown-item" href="#">Filipino</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="question-prompt">
+
+
+                    <p class="question-text">5. Illustrate 93 by answering the following questions. Choose the correct answer.  </p>
+                    <p class="question-subtext">C. How many ones are there in 93? </p>
+                    <div class="question-image">
+                        <!-- <img src="../images/WN-P2-A1_Q1A.svg" alt="blocks" width="70%"> -->
+                    </div>
+
+            </div>
+            <!-- <div class="divider">
+
+            </div> -->
+            <div class="choices">
+                <div class="choice-item option" data-choice="1">
+                    <!-- <span>A</span>
+                    <img src="../images/a1-3_q-5b_choice1.jpg" alt="blocks" width="70%"> -->
+                    <p>9 ones</p>
+                </div>
+
+                <div class="choice-item option" data-choice="2">
+                    <!-- <span>B</span>
+                    <img src="../images/a1-3_q-5b_choice2.jpg" alt="blocks" width="65%"> -->
+                    <p>3 ones</p>
+                </div>
+
+                <!-- <div class="choice-item" data-choice="3">
+                    <span>C</span>
+                    <img src="../images/WN-P2-A1_Q1A_Option-A.svg" alt="blocks" width="70%">
+                </div>
+
+                <div class="choice-item" data-choice="4">
+                    <span>D</span>
+                    <img src="../images/WN-P2-A1_Q1A_Option-B.svg" alt="blocks" width="70%">
+                </div> -->
+
+            </div>
+        </div>
+          <!-- ---------------------------- Enf Activity COntent ------------------------------>
+
+          <!-- ------------------------------- Activity Hint ------------------------------>
+        <div class="activity-hint-section">
+            <div class="hint-card-title">
+                <img src="../images/hint-icon-2.svg" alt="Hint icon" width="40px;">
+                <h4 class="hint-title">Hints</h4>
+            </div>
+            <div class="hint-card-content">
+                <p> What digit shows the ONES digit in a number?
+                </p>
+                <button id="hideHintBtn" class="hide-hint-button">
+                    Hide
+                </button>
+            </div>
+        </div>
+            <!-- -----------------------------End Activity Hint ------------------------------>
+        <!-- -------------------------- Learning Tools ------------------------------>
+        <div class="learning-tools-section">
+            <div class = "tool">
+                <img src="../images/pointer-icon.svg"/>
+            </div>
+            <div class = "tool">
+                <img src="../images/pencil.svg"/>
+            </div>
+            <div class = "tool">
+                <img src="../images/calculator.svg"/>
+            </div>
+            <div class = "tool">
+                <img src="../images/text-input.svg"/>
+            </div>
+            <!-- <div class = "tool">
+                <img src="../images/pointer-icon.svg"/>
+            </div> -->
+            <div class = "tool hint-tool">
+                <img src="../images/hint-icon.svg"/>
+            </div>
+        </div>
+            <!-- -----------------------------End Learning tools ------------------------------>
+    </div>
+     <!-- =============================== End Main Container ================================= -->
+      <!-- -----------------------------Bottom Navigation ------------------------------>
+    <div class="bottom-button">
+        <button id="nextButton" class="question-btn">Next</button>
+    </div>
+
+       <!-- -----------------------------Feedback ------------------------------>
+    <div id="feedbackSection" class="feedback-section">
+        <div class="feedback-column">
+            <img src="../images/pet_avatar.svg" alt="pet avatar">
+            <div class="triangle"></div>
+            <div class="feedback-content">
+                <p id="feedbackContent"></p>
+            </div>
+        </div>
+        <div class="feedback-button">
+            <button id="continueButton" class="continue-btn">Continue</button>
+        </div>
+
+    </div>
+
+    <script src="../js/activity_1-3_5C.js"></script>
+
+    <script src="../js/feedback.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
