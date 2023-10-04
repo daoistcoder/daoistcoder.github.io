@@ -1,10 +1,12 @@
 @font-face {
-    font-family: 'Omnes-Bold'; /* You can specify any name you want */
+    font-family: 'Omnes-Bold';
+    /* You can specify any name you want */
     src: url('../../mathayog/assets/fonts/Omnes Bold.woff') format('woff');
-  }
-  
-  @font-face {
-    font-family: 'Omnes-Regular'; /* You can specify any name you want */
+}
+
+@font-face {
+    font-family: 'Omnes-Regular';
+    /* You can specify any name you want */
     src: url('../assets/fonts/Omnes-Regular.woff') format('woff');
 }
 
@@ -16,7 +18,7 @@
 }
 
 .gen-navbar {
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     background-color: #f9f9f9;
     display: flex;
@@ -55,7 +57,7 @@ li {
     list-style: none;
 }
 
-li > a {
+li>a {
     text-decoration: none;
     font-weight: bold;
     color: #4b4b4b;
@@ -75,7 +77,7 @@ li > a {
 
 .placement-question-background {
 
-    height: 85vh;
+    height: 90vh;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,7 +104,8 @@ li > a {
 .question-background {
     padding: 30px
 }
-.question-header{
+
+.question-header {
     background-color: #859CFF;
     height: 10vh;
     padding: 30px;
@@ -111,18 +114,22 @@ li > a {
 }
 
 .question-label {
+    font-size: 2.25rem;
     color: white;
+
+    line-height: 120%;
 }
 
-.skills-bar, .skills-percentage {
+.skills-bar,
+.skills-percentage {
     height: 8px;
     border-radius: 0.25rem;
 }
-  
+
 .skills-bar {
     background-color: #9DB0FF;
 }
-  
+
 .skills-percentage {
     display: block;
     background-color: #FED723;
@@ -133,6 +140,7 @@ li > a {
     margin-bottom: 30px;
     font-family: 'Omnes-Bold';
     font-size: 35px;
+    line-height: 130%;
 }
 
 .choices-wrapper {
@@ -141,11 +149,15 @@ li > a {
     justify-content: center;
 }
 
-.ac-choice, .bd-choice {
+.ac-choice,
+.bd-choice {
     width: 30%;
 }
 
-.a-choice, .b-choice, .c-choice, .d-choice {
+.a-choice,
+.b-choice,
+.c-choice,
+.d-choice {
     height: 10rem;
     border: 2px solid grey;
     border-bottom: 6px solid grey;
@@ -158,11 +170,14 @@ li > a {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 
 
-.a-choice:hover, .b-choice:hover, .c-choice:hover, .d-choice:hover {
+.a-choice:hover,
+.b-choice:hover,
+.c-choice:hover,
+.d-choice:hover {
     border: 2px solid #859CFF;
     border-bottom: 6px solid #859CFF;
     border-radius: 20px;
@@ -172,7 +187,10 @@ li > a {
     cursor: pointer;
 }
 
-.a-choice.selected, .b-choice.selected, .c-choice.selected, .d-choice.selected {
+.a-choice.selected,
+.b-choice.selected,
+.c-choice.selected,
+.d-choice.selected {
     border: 2px solid #859CFF;
     border-bottom: 6px solid #859CFF;
     background-color: white;
@@ -215,6 +233,10 @@ li > a {
     width: 100vw;
     height: 20vh;
     margin-top: 9.58vh;
+
+    position: absolute;
+    bottom: 10%;
+    left: 0;
 }
 
 .correct-feedback {
@@ -222,15 +244,23 @@ li > a {
     width: 100vw;
     background-color: #FFD15B;
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .incorrect-feedback {
     height: 20vh;
-    width:  100vw;
+    width: 100vw;
     background-color: #E3E3E3;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-.correct-feedback, .incorrect-feedback {
+.correct-feedback,
+.incorrect-feedback {
     display: none;
     align-items: center;
     animation: slideUp 2s forwards;
@@ -241,6 +271,7 @@ li > a {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -253,7 +284,7 @@ li > a {
 }
 
 .correct-cat-speech-bubble {
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 100px;
@@ -291,10 +322,14 @@ li > a {
 }
 
 @keyframes upAndDown {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
-        transform: translateY(-20px); /* Adjust the distance of movement */
+        transform: translateY(-20px);
+        /* Adjust the distance of movement */
     }
 }

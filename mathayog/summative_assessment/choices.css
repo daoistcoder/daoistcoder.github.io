@@ -16,7 +16,7 @@
 }
 
 .gen-navbar {
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     background-color: #f9f9f9;
     display: flex;
@@ -75,7 +75,7 @@ li > a {
 
 .placement-question-background {
 
-    height: 85vh;
+    height: 90vh;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,7 +111,10 @@ li > a {
 }
 
 .question-label {
+    font-size: 2.25rem;
     color: white;
+
+    line-height: 120%;
 }
 
 .skills-bar, .skills-percentage {
@@ -133,6 +136,7 @@ li > a {
     margin-bottom: 30px;
     font-family: 'Omnes-Bold';
     font-size: 35px;
+    line-height: 130%;
 }
 
 .choices-wrapper {
@@ -215,6 +219,10 @@ li > a {
     width: 100vw;
     height: 20vh;
     margin-top: 9.58vh;
+
+    position: absolute;
+    bottom: 10%;
+    left: 0;
 }
 
 .correct-feedback {
