@@ -19,21 +19,28 @@
 
 .welcome-container::before {
   content: "";
-  position: absolute; /* Change to absolute */
+  position: absolute;
+  /* Change to absolute */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(105, 215, 246, 0.8); /* Background color with opacity */
+  background: rgba(105, 215, 246, 0.8);
+  /* Background color with opacity */
   z-index: 1;
 
-  animation-name: fadeIn; /* Reference the animation keyframes */
-  animation-duration: 0.5s; /* Duration of the animation */
-  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-  opacity: 0; /* Start with 0 opacity (invisible) */
+  animation-name: fadeIn;
+  /* Reference the animation keyframes */
+  animation-duration: 0.5s;
+  /* Duration of the animation */
+  animation-timing-function: ease-in-out;
+  /* Timing function for smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the final state of the animation */
+  opacity: 0;
+  /* Start with 0 opacity (invisible) */
 }
- 
+
 
 .dialog-section {
   display: flex;
@@ -47,11 +54,16 @@
   position: relative;
   z-index: 3;
 
-  animation-name: fadeIn; /* Reference the animation keyframes */
-  animation-duration: 1.75s; /* Duration of the animation */
-  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-  opacity: 0; /* Start with 0 opacity (invisible) */
+  animation-name: fadeIn;
+  /* Reference the animation keyframes */
+  animation-duration: 1.75s;
+  /* Duration of the animation */
+  animation-timing-function: ease-in-out;
+  /* Timing function for smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the final state of the animation */
+  opacity: 0;
+  /* Start with 0 opacity (invisible) */
 }
 
 #dialog-bubble {
@@ -59,7 +71,7 @@
   flex-direction: column;
   gap: 1vh;
 
-  width: 60%;  
+  width: 60%;
   max-height: 70%;
   min-height: fit-content;
 
@@ -71,7 +83,7 @@
   padding: 2.5rem;
   margin-top: 1vh;
   margin-right: 2vw;
-  
+
   position: relative;
   z-index: 4;
 
@@ -79,8 +91,9 @@
 }
 
 #dialog-bubble::after {
-  content: ""; /* Required for pseudo-elements with no content */
-  
+  content: "";
+  /* Required for pseudo-elements with no content */
+
   width: 15%;
   height: 0.5vh;
 
@@ -88,10 +101,50 @@
   border-bottom: 1px solid transparent;
   border-left: 45px solid #FFFFFF;
 
-  top: 30%; /* Position it vertically in the middle */
-  left: 38.5vw; /* Adjust this value to control the position of the tail */
+  top: 30%;
+  /* Position it vertically in the middle */
+  left: 38.5vw;
+  /* Adjust this value to control the position of the tail */
 
   position: absolute;
+}
+
+@media only screen and (max-width: 1440px) {
+  #dialog-bubble {
+    padding: 1.25rem;
+  }
+
+
+  #dialog-bubble::after {
+    top: 20%;
+    /* Position it vertically in the middle */
+    left: 37.5vw;
+    /* Adjust this value to control the position of the tail */
+
+    position: absolute;
+  }
+
+  .bubble-bottom-section {
+    padding: 0.25rem 0;
+  }
+
+
+  .btn {
+    font-family: 'Omnes-Bold', sans-serif;
+    font-size: 2rem;
+    color: white;
+    height: 3.25rem;
+    width: 30%;
+    border-color: transparent;
+    background-color: #859CFF;
+    border-radius: 13px;
+    border-bottom: 8px solid #7187E4;
+  
+    margin-top: 0.25vh;
+  
+    transition: background-color 0.4s;
+  }
+  
 }
 
 .bubble-text-content {
@@ -136,14 +189,15 @@
   border-radius: 10px;
 
   background-color: #F9F9F9;
-  
+
   margin: 2vh 1vw;
   padding: 1.5rem;
 }
 
 
 .bubble-text-content input:focus {
-  outline-color: #859CFF; /* Change this to your desired border color */
+  outline-color: #859CFF;
+  /* Change this to your desired border color */
 }
 
 .avatar-section {
@@ -154,11 +208,16 @@
   position: relative;
   z-index: 5;
 
-  animation-name: fadeIn; /* Reference the animation keyframes */
-  animation-duration: 0.75s; /* Duration of the animation */
-  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-  opacity: 0; /* Start with 0 opacity (invisible) */
+  animation-name: fadeIn;
+  /* Reference the animation keyframes */
+  animation-duration: 0.75s;
+  /* Duration of the animation */
+  animation-timing-function: ease-in-out;
+  /* Timing function for smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the final state of the animation */
+  opacity: 0;
+  /* Start with 0 opacity (invisible) */
 }
 
 .avatar-section img {
@@ -180,12 +239,17 @@
   position: relative;
   z-index: 5;
 
-  animation-name: fadeIn; /* Reference the animation keyframes */
-  animation-duration: 0.75s; /* Duration of the animation */
-  animation-timing-function: ease-in-out; /* Timing function for smooth animation */
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-  opacity: 0; /* Start with 0 opacity (invisible) */
-  
+  animation-name: fadeIn;
+  /* Reference the animation keyframes */
+  animation-duration: 0.75s;
+  /* Duration of the animation */
+  animation-timing-function: ease-in-out;
+  /* Timing function for smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the final state of the animation */
+  opacity: 0;
+  /* Start with 0 opacity (invisible) */
+
 }
 
 .muning-section img {
@@ -240,7 +304,7 @@
 
 .contentSection {
   width: 70%;
-  margin-left:3rem;
+  margin-left: 3rem;
 }
 
 .btnTest {
@@ -248,7 +312,7 @@
   padding: 0.25rem;
   width: 20rem;
   height: 5rem;
-  
+
   font-family: 'Omnes-Bold', sans-serif;
   font-size: 1.75rem;
   color: white;
@@ -257,9 +321,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  
-  cursor: pointer; /* Correct the cursor property value */
 
-   /* Set the border to transparent */
-   border: 1px solid transparent;
+  cursor: pointer;
+  /* Correct the cursor property value */
+
+  /* Set the border to transparent */
+  border: 1px solid transparent;
 }

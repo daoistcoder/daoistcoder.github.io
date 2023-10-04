@@ -215,6 +215,21 @@
   object-fit: contain;
 }
 
+@media only screen and (max-width: 1440px) {
+  .pet-img {
+    max-width: 100%;
+    width: min-content;
+    height: auto;
+  
+    object-fit: contain;
+
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+}
+
 .pet-text-content h4 {
   font-family: 'Omnes-Bold', sans-serif;
   font-size: 2rem;
