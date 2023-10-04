@@ -67,7 +67,7 @@ continueButton.addEventListener('click', function () {
     mainContainer.style.paddingBottom = '150px';
     //redirect page
     if (correct == true){
-        window.location.href = '../views/Exercises_1-3_3A.html';
+        window.location.href = '../../../mathayog/milestone/exercise_reward';
     }
 });
 
