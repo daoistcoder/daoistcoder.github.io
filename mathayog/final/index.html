@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../assets/css/app.css" />
+        <link rel="stylesheet" href="../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../assets/css/placement-page.css" />
+
+        <link
+            rel="icon"
+            href="../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="welcome-container">
+                    <div class="dialog-section">
+                        <div id="dialog-bubble">
+                            <div
+                                class="bubble-text-content"
+                                id="bubble-content"
+                            ></div>
+                            <div
+                                class="bubble-bottom-section"
+                                id="bubble-bottom-section"
+                            >
+                                <button class="btn" id="next-button">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="muning-section">
+                        <img
+                            src="../assets/images/svgs/muning.svg"
+                            alt="muning-svg"
+                        />
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        // Define an array of text content for each part
+        const bubbleContentArray = [
+            "<p>Congratulations on finishing that lesson!</p>",
+            "<p>You earned a total of 120 coins!</p>",
+            "<p>I bet there are more coins in the other landmarks.</p>",
+        ];
+
+        // Initialize a variable to keep track of the current text index
+        let currentContentIndex = 0;
+
+        // Get references to elements
+        const bubbleContent = document.getElementById("bubble-content");
+        const nextButton = document.getElementById("bubble-bottom-section");
+
+        // Function to update the text content
+        function updateBubbleContent() {
+            if (currentContentIndex < bubbleContentArray.length) {
+                bubbleContent.innerHTML =
+                    bubbleContentArray[currentContentIndex];
+                currentContentIndex++;
+            } else {
+                // You've reached the end of the text content
+                bubbleContent.innerHTML =
+                    "<p>Where do you want to go next?</p>";
+                nextButton.innerHTML =
+                    '<button class="btn" id="next-button" onclick="navigateToNextPage()">Next</button>';
+            }
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href = "../welcome/";
+        }
+        // Add a click event listener to the button
+        nextButton.addEventListener("click", updateBubbleContent);
+
+        // Initial update of text content
+        updateBubbleContent();
+    </script>
+</html>
