@@ -97,13 +97,10 @@
     max-height: max-content;
     height: 18%;
     min-height: min-content;
-
-    font-size: 1.5rem;
-    line-height: 110%;
-
-
-    text-align: center;
     width: 80%;
+
+    font-size: 1.75rem;
+    text-align: center;
 }
 
 .milestone-claim-section p {
