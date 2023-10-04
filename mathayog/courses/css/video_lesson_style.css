@@ -107,15 +107,16 @@ li > a {
     margin-bottom: 15px;
 }
 
-.question-prompt p{
+.question-prompt  span{
     line-height: 1.5em;
-    font-family: 'Omnes-Bold';
-    font-size: 24px;
+    /* font-family: 'Omnes-Bold'; */
+    font-size: 27px;
+    font-weight: 600;
 }
 
 .video-frame{
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 .video-frame > video{
     border-radius: 25px;
@@ -292,8 +293,24 @@ h4.hint-title{
     margin-right: 85px;
 }
 
+@media only screen and (min-width: 1860px){
 
-@media only screen and (min-width: 1281px){
+    .video-lesson-container{
+        /* height: 90vh; */
+        padding-bottom: 0px;
+
+    }
+
+    .video-content{
+        height: 50%;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+/* @media only screen and (min-width: 1281px){
 
     .video-lesson-container{
         height: 90vh;
@@ -307,4 +324,4 @@ h4.hint-title{
     }
 
 
-}
+} */

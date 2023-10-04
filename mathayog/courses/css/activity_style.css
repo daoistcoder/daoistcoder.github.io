@@ -352,7 +352,7 @@ h4.hint-title{
     padding: 20px;
     border-radius: 20px;
     width: 70%;
-    margin-top: 20px;
+    margin-top: 0px;
     box-shadow: 12px 12px 0 rgba(0,0,0,0.035);
 
 }
@@ -360,9 +360,9 @@ h4.hint-title{
 .triangle{
     width: 0;
     height: 0;
-    border-right: 20px solid #FFFFFF;
-    border-left: 20px solid transparent;
-    border-bottom: 20px solid transparent;
+    border-right: 30px solid #FFFFFF;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid transparent;
     margin-left: -25px;
 }
 
@@ -432,7 +432,6 @@ h4.hint-title{
     .activity-container{
         height: 90vh;
         padding-bottom: 0px;
-
     }
 
     .activity-content{
@@ -440,12 +439,20 @@ h4.hint-title{
         width: 70%;
     }
 
-    .learning-tools-section{
-        height: 45%;
+    .question-number{
+        font-size: 24px;
     }
 
-    .content-header{
-        height: 70%;
+    .question-prompt p, .feedback-content p{
+        font-size: 28px;
+    }
+
+    .choice-item span, p{
+        font-size: 28px;
+    }
+
+    .question-btn, .continue-btn, .hide-hint-button {
+        font-size: 28px;
     }
 }
 

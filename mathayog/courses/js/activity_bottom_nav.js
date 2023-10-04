@@ -41,7 +41,7 @@ choiceItems.forEach((element) => {
 
       // Show the bottom-button
       bottomButton.style.height = '15vh';
-      mainContainer.style.marginBottom = '-150px';
+      mainContainer.style.marginBottom = '-120px';
     });
   });
 
