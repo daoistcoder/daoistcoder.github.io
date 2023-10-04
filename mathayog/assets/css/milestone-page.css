@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 .milestone-container::before {
@@ -26,7 +25,7 @@
 
     animation-name: fadeIn;
     /* Reference the animation keyframes */
-    animation-duration: 2.5s;
+    animation-duration: 1s;
     /* Duration of the animation */
     animation-timing-function: ease-in-out;
     /* Timing function for smooth animation */
@@ -37,15 +36,24 @@
 }
 
 .milestone-content-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 2vh;
+
     width: 80%;
     height: 70vh;
 
     background-image: url('../images/backgrounds/milestone_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom; /* Position the background image at the top */
+    background-position: bottom;
+    /* Position the background image at the top */
     /* Other styles for your div */
-    
+
     position: relative;
     z-index: 5;
 
@@ -56,13 +64,105 @@
 
     border-radius: 20px;
     box-shadow: 1rem 1rem 0px rgba(0, 0, 0, 0.2);
+
+    font-family: 'Omnes-Bold';
+    color: #88D758;
+
+
+    overflow: visible;
 }
 
-#milestone-bg-img {
-    width: 100%;
-    height: auto;
-    
-    object-fit: contain;
+.milestone-text-section {
+    max-height: 40%;
+    height: max-content;
+    text-align: center;
+}
 
-    border-radius: 10%;
+.milestone-text-section h2 {
+    font-size: 4.5rem;
+    line-height: 110%;
+}
+
+.milestone-text-section h3 {
+    font-size: 3.8rem;
+}
+
+.milestone-claim-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: max-content;
+    height: 18%;
+    min-height: min-content;
+
+    font-size: 1.5rem;
+    line-height: 110%;
+
+
+    text-align: center;
+    width: 80%;
+    gap: 0.25rem;
+
+}
+
+.milestone-img-section {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-end;
+    justify-content: space-around;
+
+    position: relative;
+    left: 0;
+    bottom: -6%;
+}
+
+#npc1,
+#npc2 {
+    animation-name: hover;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#npc1 {
+    position: relative;
+    left: 10%;
+    bottom: 0;
+}
+
+#npc2 {
+    position: relative;
+    left: -10%;
+    bottom: 0;
+}
+
+#treasure {
+    position: relative;
+    left: 0;
+    bottom: -3%;
+}
+
+.milestone-btn {
+    font-family: 'Omnes-Bold', sans-serif;
+    font-size: 2rem;
+    color: white;
+    max-height: 4.5rem;
+    padding: 0.5rem;
+    width: 18rem;
+    border-color: transparent;
+    background-color: #859CFF;
+    border-radius: 20px;
+    border-bottom: 8px solid #7187E4;
+
+    transition: background-color 0.4s;
+}
+
+
+.milestone-btn:hover {
+    background-color: #9CAFFF;
+    cursor: pointer;
 }
