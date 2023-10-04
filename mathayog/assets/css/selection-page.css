@@ -228,6 +228,13 @@
     left: 10%;
   }
 
+  .pet-bubble-tail {
+    position: absolute;
+    left: 270px;
+    top: 50px;
+  }
+
+  
 }
 
 .pet-text-content h4 {
