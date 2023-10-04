@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../../assets/css/app.css" />
+        <link rel="stylesheet" href="../../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../../assets/css/placement-page.css" />
+        <link rel="stylesheet" href="../../assets/css/flight-page.css" />
+        <link rel="stylesheet" href="../../assets/css/arrival-page.css" />
+        <link rel="stylesheet" href="../../assets/css/milestone-page.css" />
+
+        <link
+            rel="icon"
+            href="../../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+
+        <style>
+            /* Add fade-in animations for arrival-muning */
+            #milestone-content-container,
+            #npc1,
+            #npc2,
+            #treasure,
+            #milestone-claim-section {
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            /* Add fade-in animations for muning-dialog-bubble-arrival */
+            #muning-dialog-bubble-arrival {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="milestone-container">
+                    <div
+                        class="milestone-content-container"
+                        id="milestone-content-container"
+                    >
+                        <div class="milestone-text-section-awesome">
+                            <h2>Awesome job!</h2>
+                        </div>
+                        <div
+                            class="milestone-claim-section-awesome"
+                            id="milestone-claim-section"
+                        >
+                            <p>You've conquered the challenge and <br>earned yourselves 10 shiny gold coins.</p>
+                            <button
+                                class="milestone-btn"
+                                onclick="navigateToNextPage()"
+                            >
+                                Claim
+                            </button>
+                        </div>
+                        <div class="milestone-img-section">
+                            <img
+                                src="../../assets/images/svgs/milestone_npc1.svg"
+                                alt="npc1"
+                                id="npc1"
+                            />
+                            <img
+                                src="../../assets/images/svgs/milestone_treasure.svg"
+                                alt="treasure"
+                                id="treasure"
+                            />
+                            <img
+                                src="../../assets/images/svgs/milestone_npc2.svg"
+                                alt="npc2"
+                                id="npc2"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        // Function to fade in arrival-muning
+        function fadeInMilestoneContainer() {
+            const milestoneSubContainer = document.getElementById(
+                "milestone-content-container"
+            );
+            milestoneSubContainer.classList.add("fade-in");
+        }
+
+        // Function to fade in muning-dialog-bubble-arrival
+        function fadeInClaimSection() {
+            const treasure = document.getElementById("treasure");
+            const claimSection = document.getElementById(
+                "milestone-claim-section"
+            );
+            treasure.classList.add("fade-in");
+            claimSection.classList.add("fade-in");
+        }
+
+        function fadeInNpc() {
+            const imgNpc1 = document.getElementById("npc1");
+            const imgNpc2 = document.getElementById("npc2");
+            imgNpc1.classList.add("fade-in");
+            imgNpc2.classList.add("fade-in");
+        }
+
+        // Function for  the slide-up
+        function showSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
+        }
+        // Function to show the slide-up after a delay
+        function showAnimation() {
+            setTimeout(function () {
+                // Call fadeInMilestoneContainer after 1000ms (1 second)
+                fadeInMilestoneContainer();
+
+                // Call fadeInClaimSection after 1000ms (1 second)
+                setTimeout(fadeInClaimSection, 500);
+
+                // Call showSlideUp after 2000ms (2 seconds)
+                setTimeout(fadeInNpc, 1200);
+            }, 1000); // 2400 milliseconds (2.4 seconds) delay
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href = "../../courses/assesment";
+        }
+
+        // Call the function when the page loads
+        window.addEventListener("load", showAnimation);
+    </script>
+</html>
