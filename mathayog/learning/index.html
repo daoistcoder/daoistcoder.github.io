@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../assets/css/app.css" />
+        <link rel="stylesheet" href="../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../assets/css/placement-page.css" />
+        <link rel="stylesheet" href="../assets/css/flight-page.css" />
+        <link rel="stylesheet" href="../assets/css/arrival-page.css" />
+        <link rel="stylesheet" href="../assets/css/learning-page.css" />
+
+
+        <link
+            rel="icon"
+            href="../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+
+        <!-- <style>
+            /* Add fade-in animations for arrival-muning */
+            #arrival-muning {
+                opacity: 0;
+                transition: opacity 0.75s ease-in-out;
+            }
+
+            /* Add fade-in animations for muning-dialog-bubble-arrival */
+            #muning-dialog-bubble-arrival {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+            }
+
+            /* CSS to style your slide-up div */
+            .slide-up {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+                background-color: #ffd15b;
+                height: 13.5rem;
+                width: 100%;
+
+                padding: 1rem;
+                gap: 1rem;
+
+                z-index: 995;
+                position: fixed;
+                bottom: 0; /* Initially at the bottom of the screen */
+                left: 0;
+
+                transform: translateY(
+                    120%
+                ); /* Initially hidden below the screen */
+
+                transition: transform 0.5s ease-in-out;
+
+                overflow: visible;
+            }
+        </style> -->
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="learning-container">
+                    <div class="arrival-content-container">
+                        <!-- <div class="arrival-muning-section">
+                            <div id="muning-dialog-bubble-arrival">
+                                <div
+                                    class="arrival-muning-bubble-text-content"
+                                    id="bubble-content"
+                                >
+                                    <p>
+                                        Oh! Looks like we just landed. Let’s see where we are?
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                id="arrival-muning"
+                                src="../assets/images/svgs/muning.svg"
+                                alt="muning-svg"
+                            />
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- <div class="slide-up" id="slide-up">
+                    <button
+                        id="next-button"
+                        class="arrival-btn"
+                        style="
+                            width: 26rem;
+                            height: 5rem;
+                            margin-bottom: 0.25rem;
+                        "
+                        onclick="navigateToNextPage()"
+                    >
+                        Start adventure
+                    </button>
+                </div> -->
+            </main>
+        </div>
+    </body>
+    <!-- <script>
+        // Function to fade in arrival-muning
+        function fadeInArrivalMuning() {
+            const arrivalMuning = document.getElementById("arrival-muning");
+            arrivalMuning.classList.add("fade-in");
+        }
+
+        // Function to fade in muning-dialog-bubble-arrival
+        function fadeInMuningDialogBubble() {
+            const muningDialogBubble = document.getElementById(
+                "muning-dialog-bubble-arrival"
+            );
+            muningDialogBubble.classList.add("fade-in");
+        }
+
+        // Function for  the slide-up
+        function showSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
+        }
+        // Function to show the slide-up after a delay
+        function showSlideUpDelayed() {
+            setTimeout(function () {
+                // Call fadeInArrivalMuning after 1000ms (1 second)
+                fadeInArrivalMuning();
+
+                // Call fadeInMuningDialogBubble after 1000ms (1 second)
+                setTimeout(fadeInMuningDialogBubble, 1000);
+
+                // Call showSlideUp after 2000ms (2 seconds)
+                setTimeout(showSlideUp, 2000);
+            }, 2000); // 2400 milliseconds (2.4 seconds) delay
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href =
+                "../learning/";
+        }
+
+        // Call the function when the page loads
+        window.addEventListener("load", showSlideUpDelayed);
+    </script> -->
+</html>
