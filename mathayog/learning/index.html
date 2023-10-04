@@ -55,13 +55,11 @@
                                         class="learning-muning-bubble-text-content"
                                         id="bubble-content"
                                     >
-                                        <p>
-                                            In each landmark, we will learn a
-                                            math lesson.
-                                        </p>
-                                        <!-- Do activities, and solve math problems. -->
                                     </div>
-                                    <div class="learning-btn-section">
+                                    <div
+                                        class="learning-btn-section"
+                                        id="learning-btn-section"
+                                    >
                                         <button class="learning-btn">
                                             Next
                                         </button>
@@ -94,4 +92,45 @@
             </main>
         </div>
     </body>
+    <script>
+        // Define an array of text content for each part
+        const bubbleContentArray = [
+            "<p>Here we are! This is Quezon City!</p>",
+            "<p>In each landmark, we will learn a math lesson.</p>",
+            "<p>Do activities, and solve math problems.</p>",
+            "<p>Every time we finish these Math tasks,we earn gold coins!</p>",
+        ];
+
+        // Initialize a variable to keep track of the current text index
+        let currentContentIndex = 0;
+
+        // Get references to elements
+        const bubbleContent = document.getElementById("bubble-content");
+        const nextButton = document.getElementById("learning-btn-section");
+
+        // Function to update the text content
+        function updateBubbleContent() {
+            if (currentContentIndex < bubbleContentArray.length) {
+                bubbleContent.innerHTML =
+                    bubbleContentArray[currentContentIndex];
+                currentContentIndex++;
+            } else {
+                // You've reached the end of the text content
+                bubbleContent.innerHTML =
+                    "<p>Let’s go to QC Circle first!</p>";
+                nextButton.innerHTML =
+                    '';
+            }
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href = "../courses/";
+        }
+        // Add a click event listener to the button
+        nextButton.addEventListener("click", updateBubbleContent);
+
+        // Initial update of text content
+        updateBubbleContent();
+    </script>
 </html>
