@@ -36,50 +36,73 @@
 }
 
 
+
+
+.arrival-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+
+    gap: 2rem;
+  
+    position: relative;
+    width: 95vw;
+    max-height: 85%;
+    min-height: max-content;
+
+
+    overflow: visible;
+}
+
 .arrival-muning-section {
     display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 75%;
+    flex-direction: row;
+
+    align-items: start;
+    justify-content: flex-end;
+    width: 80%;
+    height: 42rem;
+
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
 
     position: relative;
-    bottom: -25%;
     z-index: 5;
-
+/* 
     animation-name: fadeIn;
-    /* Reference the animation keyframes */
     animation-duration: 0.75s;
-    /* Duration of the animation */
     animation-timing-function: ease-in-out;
-    /* Timing function for smooth animation */
     animation-fill-mode: forwards;
-    /* Keeps the final state of the animation */
-    opacity: 0;
+
+    opacity: 0; */
     /* Start with 0 opacity (invisible) */
 }
 
 .arrival-muning-section img {
-    width: 19.75rem;
-    max-width: 20vw;
+    width: 44rem;
     height: auto;
-
-    position: relative;
 
     animation-name: hover;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
 }
 
 
 #muning-dialog-bubble-arrival {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
     gap: 1vh;
 
-    width: 72%;
+    width: 60%;
     max-height: 50%;
-    height: 14.5vh;
+    height: 25.5vh;
     min-height: fit-content;
 
     background-color: #ffffff;
@@ -99,39 +122,61 @@
     /* Required for pseudo-elements with no content */
 
     width: 15%;
-    height: 0.5vh;
+    height: 0.75vh;
 
-    border-top: 45px solid transparent;
+    border-top: 65px solid transparent;
     border-bottom: 1px solid transparent;
-    border-right: 45px solid #ffffff;
+    border-left: 65px solid #ffffff;
 
     position: absolute;
-    top: 20%;
+    top: 25%;
     /* Position it vertically in the middle */
-    left: -9.5vw;
+    left: 40vw;
     /* Adjust this value to control the position of the tail */
 
 }
 
-.muning-bubble-text-content {
+.arrival-muning-bubble-text-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     min-width: min-content;
     max-width: 90%;
     height: 100%;
 
-    padding: 1rem 2rem;
+    padding: 1rem;
     z-index: 5;
 }
 
 
-.muning-bubble-text-content p {
+.arrival-muning-bubble-text-content p {
     color: #4B4B4B;
     font-family: 'Omnes-SemiBold', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
 
     word-spacing: 0.25rem;
-    line-height: 2.5rem;
+    line-height: 4.25rem;
 }
+
+.arrival-btn {
+    font-family: 'Omnes-Bold', sans-serif;
+    font-size: 2rem;
+    color: white;
+    height: 4.5rem;
+    width: 33%;
+    border-color: transparent;
+    background-color: #859CFF;
+    border-radius: 20px;
+    border-bottom: 8px solid #7187E4;
+  
+    margin-top: 1vh;
+  
+    transition: background-color 0.4s;
+  }
+  
+  
+  .arrival-btn:hover {
+    background-color: #9CAFFF;
+    cursor: pointer;
+  }

@@ -92,3 +92,24 @@
   background-color: #9CAFFF;
   cursor: pointer;
 }
+
+.btn2 {
+  font-family: 'Omnes-Bold', sans-serif;
+  font-size: 2rem;
+  color: #859CFF;
+  height: 4.5rem;
+  width: 33%;
+  border: 2px solid #859CFF;
+  background-color: #FFF;
+  border-radius: 20px;
+  border-bottom: 8px solid #859CFF;
+
+  transition: background-color 0.4s, color 0.4s; 
+}
+
+
+.btn2:hover {
+  color: #FFF;
+  background-color: #9CAFFF;
+  cursor: pointer;
+}
