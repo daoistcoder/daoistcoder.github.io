@@ -73,6 +73,8 @@
 }
 
 .milestone-text-section {
+    padding: 1rem;
+
     max-height: 40%;
     height: max-content;
     text-align: center;
