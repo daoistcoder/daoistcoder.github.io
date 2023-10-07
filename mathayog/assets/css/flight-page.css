@@ -133,3 +133,39 @@
     word-spacing: 0.25rem;
     line-height: 3rem;
   }
+
+  @media only screen and (max-width: 1440px) {
+
+    #muning-dialog-bubble {
+      width: 65%;  
+      height: fit-content;
+    }
+    #muning-dialog-bubble::after {
+      width: 15%;
+      height: 0.4vh;
+    
+      border-top: 45px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-right: 45px solid #ffffff;
+  
+      position: absolute;
+      top: 25%; /* Position it vertically in the middle */
+      left: -9vw; /* Adjust this value to control the position of the tail */
+    
+    }
+
+    .muning-bubble-text-content {
+      width: 99%;
+      height: max-content;
+      
+      padding: 2rem 1.5rem;
+      z-index: 5;
+    }
+
+    .muning-bubble-text-content p {
+      font-size: 1.75rem;
+    
+      word-spacing: 0.15rem;
+      line-height: 110%;
+    }
+  }
