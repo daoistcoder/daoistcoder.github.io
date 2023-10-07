@@ -8,6 +8,8 @@ const choiceItems = document.querySelectorAll('.choice-item');
 const bottomButton = document.querySelector('.bottom-button');
 const nextButton = document.getElementById('nextButton');
 const continueButton = document.getElementById('continueButton');
+const feedbackButtonWrapper = document.querySelector('.feedback-button');
+const skipButton = document.getElementById('skipBtn');
 
 const feedback = document.getElementById('feedbackSection');
 const choices = document.querySelectorAll('choice-item');
@@ -32,12 +34,15 @@ choiceItems.forEach((element) => {
       // Add the 'selected' class to the clicked choice element
       element.classList.add('selected');
 
-      if (element.getAttribute('data-choice') === '1') {
+      if (element.getAttribute('data-choice') === '2') {
         correct = true;
 
         feedback.style.display = 'block';
         feedbackContent.innerText = feedbackArr[0];
         feedback.style.backgroundColor = '#FFD15B';
+        feedbackButtonWrapper.style.marginTop = '-25px;'
+        skipButton.style.display = "block";
+
         }
         else{
             correct = false;

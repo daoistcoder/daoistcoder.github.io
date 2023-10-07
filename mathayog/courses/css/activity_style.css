@@ -368,7 +368,7 @@ h4.hint-title{
 
 .feedback-button{
     width: 20%;
-    padding: 0px;
+    /* padding: 0px; */
     float: right;
     padding: 25px;
 }
