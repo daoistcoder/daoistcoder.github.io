@@ -180,3 +180,31 @@
     background-color: #9CAFFF;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 1440px){
+    .arrival-muning-bubble-text-content p {
+        color: #4B4B4B;
+        font-family: 'Omnes-SemiBold', sans-serif;
+        font-size: 2.5rem;
+    
+        word-spacing: 0.25rem;
+        line-height: 125%;
+    }
+
+    .arrival-muning-section img {
+        width: 40rem;
+    
+    }
+
+    #muning-dialog-bubble-arrival {
+        position: relative;
+        top: 5%;
+        left: 5%;
+    }
+
+    #muning-dialog-bubble-arrival::after {
+        position: absolute;
+        top: 20%;
+        left: 35vw;
+    }
+  }
