@@ -215,6 +215,32 @@
   object-fit: contain;
 }
 
+@media only screen and (max-width: 1440px) {
+  .pet-img {
+    max-width: 100%;
+    width: min-content;
+    height: auto;
+  
+    object-fit: contain;
+
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  .pet-bubble-tail {
+    position: absolute;
+    left: 270px;
+    top: 50px;
+  }
+
+  .map-card {
+    gap: 1rem;
+    padding: 0.25rem;
+  }
+  
+}
+
 .pet-text-content h4 {
   font-family: 'Omnes-Bold', sans-serif;
   font-size: 2rem;
