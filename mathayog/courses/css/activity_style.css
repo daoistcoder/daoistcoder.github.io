@@ -333,7 +333,7 @@ h4.hint-title{
     right:0;
     z-index: 3;
     display: none;
-    animation: slideUp 2s forwards;
+    animation: slideUp 1s forwards;
 }
 
 .feedback-column{

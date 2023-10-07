@@ -32,37 +32,44 @@ choiceItems.forEach((element) => {
       // Add the 'selected' class to the clicked choice element
       element.classList.add('selected');
 
-      if (element.getAttribute('data-choice') === '2') {
+      if (element.getAttribute('data-choice') === '1') {
         correct = true;
+
+        feedback.style.display = 'block';
+        feedbackContent.innerText = feedbackArr[0];
+        feedback.style.backgroundColor = '#FFD15B';
         }
         else{
             correct = false;
+            feedback.style.display = 'block';
+            feedback.style.backgroundColor = '#E3E3E3';
+            feedbackContent.innerText = feedbackArr[1];
         }
 
       // Show the bottom-button
-      bottomButton.style.height = '15vh';
-      mainContainer.style.marginBottom = '-150px';
+    //   bottomButton.style.height = '15vh';
+    //   mainContainer.style.marginBottom = '-150px';
 
 
     });
   });
 
-  nextButton.addEventListener('click', function () {
-    // Redirect to the desired page (e.g., "asd.html")
-    // window.location.href = 'p_question_2.html';
+//   nextButton.addEventListener('click', function () {
+//     // Redirect to the desired page (e.g., "asd.html")
+//     // window.location.href = 'p_question_2.html';
 
-    //Condition/ check answer
-    if (correct == true) {
-        feedback.style.display = 'block';
-        feedbackContent.innerText = feedbackArr[0];
-        feedback.style.backgroundColor = '#FFD15B';
-    }
-    else{
-        feedback.style.display = 'block';
-        feedback.style.backgroundColor = '#E3E3E3';
-        feedbackContent.innerText = feedbackArr[1];
-    }
-});
+//     //Condition/ check answer
+//     if (correct == true) {
+//         feedback.style.display = 'block';
+//         feedbackContent.innerText = feedbackArr[0];
+//         feedback.style.backgroundColor = '#FFD15B';
+//     }
+//     else{
+//         feedback.style.display = 'block';
+//         feedback.style.backgroundColor = '#E3E3E3';
+//         feedbackContent.innerText = feedbackArr[1];
+//     }
+// });
 
 continueButton.addEventListener('click', function () {
     // Closes feedback slide
