@@ -235,8 +235,14 @@
   }
 
   .map-card {
-    gap: 1rem;
-    padding: 0.25rem;
+    gap: 0.25rem;
+    padding: 0 0.25rem;
+  }
+
+  .pet-card {
+    gap: 0.25rem;
+    padding: 0 0.25rem;
+    margin: 0 0.5rem
   }
   
 }
