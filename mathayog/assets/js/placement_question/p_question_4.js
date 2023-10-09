@@ -23,6 +23,7 @@ h2Elements.forEach((element) => {
     h2Elements.forEach((el) => el.classList.remove('selected'));
     // Add the 'selected' class to the clicked h2 element
     element.classList.add('selected');
+    answerSelected = true;
     
     // Show the bottom-button
     // bottomButton.style.height = '20vh';

@@ -145,6 +145,13 @@ li > a {
     color: #859CFF;
 }
 
+.selected{
+    border: 2px solid #859CFF;
+    border-bottom: 6px solid #859CFF;
+    background-color: white;
+    color: #859CFF;
+}
+
 
 .bottom-button {
     background: white;
