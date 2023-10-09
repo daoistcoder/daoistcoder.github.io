@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../../assets/css/app.css" />
+        <link rel="stylesheet" href="../../assets/css/nav-bar.css" />
+        <link rel="stylesheet" href="../../assets/css/welcome-page.css" />
+        <link rel="stylesheet" href="../../assets/css/selection-page.css" />
+        <link rel="stylesheet" href="../../assets/css/placement-page.css" />
+        <link rel="stylesheet" href="../../assets/css/flight-page.css" />
+        <link rel="stylesheet" href="../../assets/css/arrival-page.css" />
+        <link rel="stylesheet" href="../../assets/css/milestone-page.css" />
+        <link rel="stylesheet" href="../../assets/css/learning-page.css" />
+        <link rel="stylesheet" href="../../assets/css/muning-page.css" />
+
+        <link
+            rel="icon"
+            href="../../assets/images/icons/mathayog_logo.ico"
+            type="image/x-icon"
+        />
+        <title>Mathayog</title>
+
+        <style>
+            /* Add fade-in animations for arrival-muning */
+            #milestone-content-container,
+            #npc1,
+            #npc2,
+            #treasure,
+            #milestone-claim-section {
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            /* Add fade-in animations for muning-dialog-bubble-arrival */
+            #muning-dialog-bubble-arrival {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .fade-in {
+                opacity: 1 !important;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            /* CSS to style your slide-up div */
+            .slide-up {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                position: fixed;
+                bottom: 0; /* Initially at the bottom of the screen */
+                left: 0;
+
+                height: 13.25rem;
+                width: 100%;
+                background-color: transparent;
+                transform: translateY(
+                    120%
+                ); /* Initially hidden below the screen */
+                transition: transform 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+                padding: 1rem;
+                z-index: 992; /* Adjust the z-index as needed */
+
+                overflow: visible;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav class="navbar">
+                <div class="navContainer">
+                    <div class="logoSection">
+                        <img
+                            src="../../assets/images/svgs/mathayog_logo.svg"
+                            alt="mathayog icon"
+                            id="logoIcon"
+                        />
+                        <p>Mathayog</p>
+                    </div>
+
+                    <div class="userSection">
+                        <p>Juan dela Cruz</p>
+                        <img
+                            src="../../assets/images/icons/userIcon.png"
+                            alt="user icon"
+                            id="userIcon"
+                        />
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-container" id="root">
+                <div class="milestone-container">
+                    <div
+                        class="milestone-content-container"
+                        id="milestone-content-container"
+                    >
+                        <div class="milestone-text-section">
+                            <h2>Awesome job!</h2>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <div
+                            class="muning-milestone-claim-section"
+                            id="milestone-claim-section"
+                        >
+                            <div class="claim-main-content">
+                                <p>You earned 40 gold coins!</p>
+                                <button
+                                    class="milestone-btn"
+                                >
+                                    Claim
+                                </button>
+                            </div>
+                            <div class="milestone-muning-container">
+                                <div class="muning-milestone-bubble-section">
+                                    <div id="muning-dialog-bubble">
+                                        <div
+                                            class="milestone-bubble-text-content"
+                                            id="bubble-content"
+                                        ></div>
+                                        <div
+                                            class="muning-milestone-btn-section"
+                                            id="muning-milestone-btn-section"
+                                        >
+                                            <button
+                                                class="muning-milestone-btn"
+                                                id="learning-btn"
+                                            >
+                                                Next
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src="../../assets/images/svgs/muning.svg"
+                                    alt="muning-svg"
+                                />
+                            </div>
+                        </div>
+                        <div class="milestone-img-section">
+                            <img
+                                src="../../assets/images/svgs/milestone_npc1.svg"
+                                alt="npc1"
+                                id="npc1"
+                            />
+                            <img
+                                src="../../assets/images/svgs/milestone_treasure.svg"
+                                alt="treasure"
+                                id="treasure"
+                            />
+                            <img
+                                src="../../assets/images/svgs/milestone_npc2.svg"
+                                alt="npc2"
+                                id="npc2"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="slide-up" id="slide-up">
+                    <div class="flight-muning-section">
+                        <img
+                            src="../../assets/images/svgs/muning.svg"
+                            alt="muning-svg"
+                        />
+                        <div id="muning-dialog-bubble">
+                            <div
+                                class="muning-bubble-text-content"
+                                id="bubble-content"
+                            >
+                                <p>
+                                    Alright, let’s start. I’ll be asking you 10
+                                    math questions. Take all the time you need
+                                    to answer them.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </main>
+        </div>
+    </body>
+    <script>
+        // Define an array of text content for each part
+        const bubbleContentArray = [
+            "<p>Great work adventurer!</p>",
+            "<p>Because you successfully completed your  Whole Numbers adventure</p>",
+            "<p>You've earned 40 coins!</p>",
+        ];
+
+        // Initialize a variable to keep track of the current text index
+        let currentContentIndex = 0;
+
+        // Get references to elements
+        const bubbleContent = document.getElementById("bubble-content");
+        const nextButton = document.getElementById(
+            "muning-milestone-btn-section"
+        );
+
+        // Function to update the text content
+        function updateBubbleContent() {
+            if (currentContentIndex < bubbleContentArray.length) {
+                bubbleContent.innerHTML =
+                    bubbleContentArray[currentContentIndex];
+                currentContentIndex++;
+            } else {
+                // You've reached the end of the text content
+                bubbleContent.innerHTML = "<p>Where do we go next?</p>";
+                nextButton.classList.add("hidden")
+            }
+        }
+        // Function for  the slide-up
+        function showSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
+        }
+
+        // Function to fade in arrival-muning
+        function fadeInMilestoneContainer() {
+            const milestoneSubContainer = document.getElementById(
+                "milestone-content-container"
+            );
+            milestoneSubContainer.classList.add("fade-in");
+        }
+
+        // Function to fade in muning-dialog-bubble-arrival
+        function fadeInClaimSection() {
+            const treasure = document.getElementById("treasure");
+            const claimSection = document.getElementById(
+                "milestone-claim-section"
+            );
+            treasure.classList.add("fade-in");
+            claimSection.classList.add("fade-in");
+        }
+
+        function fadeInNpc() {
+            const imgNpc1 = document.getElementById("npc1");
+            const imgNpc2 = document.getElementById("npc2");
+            imgNpc1.classList.add("fade-in");
+            imgNpc2.classList.add("fade-in");
+        }
+
+        // Function for  the slide-up
+        function showSlideUp() {
+            const slideUp = document.getElementById("slide-up");
+            slideUp.style.transform = "translateY(0%)"; // Slide it down to hide
+        }
+        // Function to show the slide-up after a delay
+        function showAnimation() {
+            setTimeout(function () {
+                // Call fadeInMilestoneContainer after 1000ms (1 second)
+                fadeInMilestoneContainer();
+
+                // Call fadeInClaimSection after 1000ms (1 second)
+                setTimeout(showSlideUp, 500);
+
+                // Call fadeInClaimSection after 1000ms (1 second)
+                setTimeout(fadeInClaimSection, 1000);
+
+                // Call showSlideUp after 2000ms (2 seconds)
+                setTimeout(fadeInNpc, 1200);
+            }, 1000); // 2400 milliseconds (2.4 seconds) delay
+        }
+
+        function navigateToNextPage() {
+            // Replace the URL with the desired URL
+            window.location.href = "../awesome/";
+        }
+
+        // Call the function when the page loads
+        window.addEventListener("load", showAnimation);
+
+        // Add a click event listener to the button
+        nextButton.addEventListener("click", updateBubbleContent);
+
+        // Initial update of text content
+        updateBubbleContent();
+    </script>
+</html>

@@ -1,0 +1,227 @@
+.muning-milestone-claim-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: max-content;
+    height: 18%;
+    min-height: min-content;
+    width: 80%;
+
+    overflow: visible;
+}
+
+.claim-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    max-height: max-content;
+    height: 100%;
+    min-height: min-content;
+
+    width: max-content;
+
+    font-size: 1.75rem;
+    text-align: center;
+
+    position: relative;
+    top: 0;
+    left: 36%;
+}
+
+.milestone-muning-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 55rem;
+    height: auto;
+    position: relative;
+    z-index: 990;
+    bottom: -210%;
+    left: 25%;
+
+    overflow: visible;
+}
+
+.muning-milestone-bubble-section {
+    height: 26vh;
+    width: 50%;
+
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+
+
+    justify-content: center;
+    overflow: visible;
+
+    position: relative;
+    top: 0;
+    left: 7%;
+}
+
+
+#muning-dialog-bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.5vh;
+    padding: 1rem 1rem 0.5rem;
+
+    width: 150%;
+    max-height: 130%;
+    height: max-content;
+    min-height: 50%;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0.7rem 0.7rem 0px rgba(0, 0, 0, 0.2);
+
+}
+
+#muning-dialog-bubble::after {
+    content: "";
+    /* Required for pseudo-elements with no content */
+
+    width: 15%;
+    height: 0.75vh;
+
+    border-top: 65px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 50px solid #ffffff;
+    border-right: transparent;
+
+    position: absolute;
+    top: 19%;
+    /* Position it vertically in the middle */
+    left: 31vw;
+    /* Adjust this value to control the position of the tail */
+
+}
+
+.milestone-bubble-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-content: flex-start;
+    width: 95%;
+
+    height: max-content;
+    min-height: fit-content;
+
+    z-index: 5;
+}
+
+
+.milestone-bubble-text-content p {
+    color: #4B4B4B;
+    font-family: 'Omnes-SemiBold', sans-serif;
+    font-size: 2.5rem;
+
+    word-spacing: 0.25rem;
+    line-height: 125%;
+}
+
+.muning-milestone-btn-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+    height: max-content;
+    min-height: 4rem;
+    padding: 0.25rem;
+
+    position: relative;
+    z-index: inherit;
+}
+
+.muning-milestone-btn {
+    font-family: 'Omnes-Bold', sans-serif;
+    font-size: 2rem;
+    color: white;
+    height: 3.25rem;
+    width: 30%;
+    border-color: transparent;
+    background-color: #859CFF;
+    border-radius: 13px;
+    border-bottom: 8px solid #7187E4;
+
+    transition: background-color 0.4s;
+}
+
+
+.muning-milestone-btn:hover {
+    background-color: #9CAFFF;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .claim-main-content {
+        position: relative;
+        top: 0;
+        left: 37%;
+
+        overflow: visible;
+    }
+
+    .claim-main-content p {
+        width: 140%;
+        line-height: 110%;
+    }
+
+    .milestone-muning-container {
+        width: 45rem;
+        position: relative;
+        bottom: -210%;
+        left: 20%;
+    }
+
+    .muning-milestone-bubble-section {
+        height: 35vh;
+        width: 50%;
+    }
+
+    #muning-dialog-bubble {
+        width: 35vw;
+        min-height: 35%;
+
+
+        position: relative;
+        top: -15%;
+        left: -2%;
+    }
+
+    #muning-dialog-bubble::after {
+        height: 0.25vh;
+
+        border-top: 45px solid transparent;
+
+
+        position: absolute;
+        top: 15%;
+        left: 33.5vw;
+    }
+
+    .milestone-bubble-text-content {
+        font-size: 2.25rem;
+
+        word-spacing: 0.25rem;
+        line-height: 125%;
+    }
+
+    .milestone-bubble-text-content p {
+        font-size: 2.25rem;
+
+        word-spacing: 0.25rem;
+        line-height: 125%;
+    }
+
+}
