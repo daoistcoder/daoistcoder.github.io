@@ -29,6 +29,8 @@
     position: relative;
     top: 0;
     left: 36%;
+
+    overflow: visible;
 }
 
 .milestone-muning-container {
@@ -142,6 +144,20 @@
     z-index: inherit;
 }
 
+.claim-btn-section {
+    width: 130%;
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:1rem 0;
+
+    position: relative;
+    z-index: 999;
+}
+
 .muning-milestone-btn {
     font-family: 'Omnes-Bold', sans-serif;
     font-size: 2rem;
@@ -162,6 +178,42 @@
     cursor: pointer;
 }
 
+
+.muning-milestone-img-section {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-end;
+    justify-content: space-around;
+
+    position: relative;
+    left: 0;
+    bottom: -15%;
+
+    overflow: visible;
+}
+
+#muning-npc1,
+#muning-npc2 {
+    animation-name: hover;
+    animation-duration: 1.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#muning-npc1 {
+    position: relative;
+    left: 10%;
+    bottom: 8%;
+}
+
+#muning-npc2 {
+    position: relative;
+    left: -10%;
+    bottom: 8%;
+}
 
 @media only screen and (max-width: 1440px) {
     .claim-main-content {
@@ -223,5 +275,20 @@
         word-spacing: 0.25rem;
         line-height: 125%;
     }
+
+    .claim-btn-section {
+        padding:0.5rem 0;
+    }
+
+    .muning-milestone-btn {
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 33%;
+
+        padding: 0 1rem;
+    
+    }
+
+
 
 }
