@@ -37,7 +37,7 @@ h2Elements.forEach((element) => {
       // bottomButton.style.display = 'none';
     //   correctFeedback.style.display = 'none';
     //   incorrectFeedback.style.display = 'flex';
-        window.location.href = '../milestone/assesment_reward/';
+        window.location.href = '../milestone/muning/';
     }
     
     h2Elements.forEach((el) =>  el.classList.remove('selected'));
